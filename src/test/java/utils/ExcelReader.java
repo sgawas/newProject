@@ -10,13 +10,26 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 	
-	public String path;
+	private String path;
 	private FileInputStream fileIn = null;
 	private FileOutputStream fileOut = null;
-	private XSSFWorkbook workbook = null;
+	private XSSFWorkbook workBook = null;
 	private XSSFSheet sheet = null;
 	private XSSFRow row = null;
 	private XSSFCell cell = null;
+	
+	public ExcelReader(String path) {
+		this.path = path;
+		try{
+			fileIn = new FileInputStream(path);
+			workBook = new XSSFWorkbook(fileIn);
+			sheet = workBook.getSheetAt(0);
+			fileIn.close();
+		}
+		catch(Exception e){
+			System.out.println("Exception in ExcelReader: "+e.getStackTrace());
+		}
+	}
 	
 	
 
