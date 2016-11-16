@@ -3,9 +3,9 @@ package utils;
 public class Configs {
 
 	private static String SERVER = "smtp.gmail.com";
-	private static String FROM = "w2aispg@gmail.com";
+	private static String FROM_EMAIL = "w2aispg@gmail.com";
 	private static String PASSWORD = "Ispg$123";
-	private static String[] TO = { "seleniumcoaching@gmail.com", "trainer@way2automation.com" };
+	private static String[] TO_EMAIL = { "seleniumcoaching@gmail.com", "trainer@way2automation.com" };
 	private static String SUBJECT = "Test Report";
 
 	private static String MESSAGE_BODY = "TestMessage";
@@ -28,16 +28,16 @@ public class Configs {
 		return SERVER;
 	}
 
-	public static String getFROM() {
-		return FROM;
+	public static String getFROM_EMAIL() {
+		return FROM_EMAIL;
 	}
 
 	public static String getPASSWORD() {
 		return PASSWORD;
 	}
 
-	public static String[] getTO() {
-		return TO;
+	public static String[] getTO_EMAIL() {
+		return TO_EMAIL;
 	}
 
 	public static String getSUBJECT() {
