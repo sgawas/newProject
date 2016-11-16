@@ -7,19 +7,14 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Core {
+import utils.ExcelReader;
 
+public class Core {
+	public static ExcelReader coreExcel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\java\\excel\\Core.xlsx");
+	public static ExcelReader dataExcel = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\java\\excel\\testData.xlsx");
 	public static WebDriver driver = null;
 	public static Properties config = null;
 	public static Properties object = null;
-	public static WebDriver getDriver() {
-		return driver;
-	}
-
-	public static void setDriver(WebDriver driver) {
-		Core.driver = driver;
-	}
-
 	public static WebDriverWait wait = null;
 	public static String timeStamp = null;
 
